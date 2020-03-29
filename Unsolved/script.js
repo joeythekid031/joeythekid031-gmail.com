@@ -31,11 +31,16 @@ function generatePassword(lowerVal, upperVal, numberVal, symbolVal, length){
 
   // var typesCount = lowerVal + upperVal + numberVal + symbolVal;
 
-  var length = prompt("How long would you like your password? Minimum of 8");
+  var length = prompt("How long would you like your password? Min of 8, max  of 128");
   var hasLower = confirm("Do you want lowercase letters?")
   var hasUpper = confirm("Do you want uppercase letters?")
   var numberVal = confirm("Do you want numbers?")
   var hasSymbol = confirm("Do you want symbols?")
+
+  if (length < 8 || length > 128){
+    return("Invalid Length");
+  }  
+  
 
   var typesCount = lowerVal + upperVal + numberVal + symbolVal;
 
