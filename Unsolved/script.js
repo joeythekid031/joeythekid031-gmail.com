@@ -22,7 +22,8 @@ var symbolVal = true;
 
 generatEl.addEventListener("click", function(){
 
-generatePassword(lowerVal, upperVal, numberVal, symbolVal, length);
+
+myPassword.textContent = generatePassword(lowerVal, upperVal, numberVal, symbolVal, length);
 });
 function generatePassword(lowerVal, upperVal, numberVal, symbolVal, length){
 
@@ -51,6 +52,8 @@ function generatePassword(lowerVal, upperVal, numberVal, symbolVal, length){
 		});
 	}
   console.log(generatedPassword);
+  return(generatedPassword);
+
   myPassEl.textContent = (generatedPassword);
   
   // for (let i = 0 ; i < lengthVal; i += typesCount){
